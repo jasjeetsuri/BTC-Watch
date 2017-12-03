@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41208EB41FB72C1000F45A9F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41208EB31FB72C1000F45A9F /* SettingsViewController.swift */; };
+		416F45AA1FC33AA40078431D /* CostTxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416F45A91FC33AA40078431D /* CostTxTableViewCell.swift */; };
+		416F45AC1FC5EAA10078431D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416F45AB1FC5EAA10078431D /* MainTabBarController.swift */; };
+		417B66771FC05388004E5CD2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B66761FC05388004E5CD2 /* SettingsTableViewController.swift */; };
+		417B66791FC05E09004E5CD2 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B66781FC05E09004E5CD2 /* CurrencyViewController.swift */; };
+		417B667B1FC07E73004E5CD2 /* NewSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B667A1FC07E73004E5CD2 /* NewSettingsViewController.swift */; };
+		417B66821FC1C8F5004E5CD2 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B66811FC1C8F5004E5CD2 /* TransactionTableViewController.swift */; };
+		417B66841FC1CA2F004E5CD2 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B66831FC1CA2F004E5CD2 /* TransactionTableViewCell.swift */; };
+		417B66861FC1F5E3004E5CD2 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B66851FC1F5E3004E5CD2 /* Transaction.swift */; };
+		417B66881FC1F65D004E5CD2 /* TransactionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B66871FC1F65D004E5CD2 /* TransactionApi.swift */; };
+		93EF0CA41BF41DA20051B5B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF0CA31BF41DA20051B5B1 /* AppDelegate.swift */; };
+		93EF0CA61BF41DA20051B5B1 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF0CA51BF41DA20051B5B1 /* OverviewViewController.swift */; };
+		93EF0CA91BF41DA20051B5B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EF0CA71BF41DA20051B5B1 /* Main.storyboard */; };
+		93EF0CAB1BF41DA20051B5B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EF0CAA1BF41DA20051B5B1 /* Assets.xcassets */; };
+		93EF0CAE1BF41DA20051B5B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EF0CAC1BF41DA20051B5B1 /* LaunchScreen.storyboard */; };
+		C2A5A6363FE16438A95C2DDB /* Pods_BTC_Watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4F766E337FDE54F3B0F82A /* Pods_BTC_Watch.framework */; };
+		C9C382F21FC0D4110040D99F /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C382F11FC0D4110040D99F /* SegueIdentifiers.swift */; };
+		C9C382F61FC0E8F10040D99F /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C382F51FC0E8F10040D99F /* Colours.swift */; };
+		C9C382FA1FC0E9B20040D99F /* SegueIdentityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C382F91FC0E9B20040D99F /* SegueIdentityProvider.swift */; };
+		C9C382FE1FC0ED2D0040D99F /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C382FD1FC0ED2D0040D99F /* CurrencyTableViewCell.swift */; };
+		C9C383001FC0EDF90040D99F /* CurrencySettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C382FF1FC0EDF90040D99F /* CurrencySettingTableViewCell.swift */; };
+		C9C383021FC0EE0B0040D99F /* XPubSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C383011FC0EE0B0040D99F /* XPubSettingTableViewCell.swift */; };
+		C9C383041FC0F16A0040D99F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C383031FC0F16A0040D99F /* Networking.swift */; };
+		C9C383081FC0F56D0040D99F /* BTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C383071FC0F56D0040D99F /* BTC.swift */; };
+		C9C3830A1FC0F9F70040D99F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C383091FC0F9F70040D99F /* UIViewController.swift */; };
+		C9C3830C1FC7787C0040D99F /* BTCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C3830B1FC7787C0040D99F /* BTCTabBarController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06A0030569A298496C99C888 /* Pods-BTC Watch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTC Watch.release.xcconfig"; path = "Pods/Target Support Files/Pods-BTC Watch/Pods-BTC Watch.release.xcconfig"; sourceTree = "<group>"; };
+		41208EB31FB72C1000F45A9F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		416F45A91FC33AA40078431D /* CostTxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostTxTableViewCell.swift; sourceTree = "<group>"; };
+		416F45AB1FC5EAA10078431D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		417B66761FC05388004E5CD2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		417B66781FC05E09004E5CD2 /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
+		417B667A1FC07E73004E5CD2 /* NewSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSettingsViewController.swift; sourceTree = "<group>"; };
+		417B66811FC1C8F5004E5CD2 /* TransactionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
+		417B66831FC1CA2F004E5CD2 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		417B66851FC1F5E3004E5CD2 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		417B66871FC1F65D004E5CD2 /* TransactionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionApi.swift; sourceTree = "<group>"; };
+		5FAE3E76FD16F1D94B04CEB0 /* Pods-BTC Watch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTC Watch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BTC Watch/Pods-BTC Watch.debug.xcconfig"; sourceTree = "<group>"; };
+		6D4F766E337FDE54F3B0F82A /* Pods_BTC_Watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BTC_Watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93EF0CA01BF41DA20051B5B1 /* BTC Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTC Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93EF0CA31BF41DA20051B5B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93EF0CA51BF41DA20051B5B1 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		93EF0CA81BF41DA20051B5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93EF0CAA1BF41DA20051B5B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93EF0CAD1BF41DA20051B5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93EF0CAF1BF41DA20051B5B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9C382F11FC0D4110040D99F /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
+		C9C382F51FC0E8F10040D99F /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		C9C382F91FC0E9B20040D99F /* SegueIdentityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentityProvider.swift; sourceTree = "<group>"; };
+		C9C382FD1FC0ED2D0040D99F /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		C9C382FF1FC0EDF90040D99F /* CurrencySettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySettingTableViewCell.swift; sourceTree = "<group>"; };
+		C9C383011FC0EE0B0040D99F /* XPubSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPubSettingTableViewCell.swift; sourceTree = "<group>"; };
+		C9C383031FC0F16A0040D99F /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		C9C383071FC0F56D0040D99F /* BTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTC.swift; sourceTree = "<group>"; };
+		C9C383091FC0F9F70040D99F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		C9C3830B1FC7787C0040D99F /* BTCTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCTabBarController.swift; sourceTree = "<group>"; };
+		CDD7F17549BB961A1C9D9938 /* Pods_PhotoTagger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoTagger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93EF0C9D1BF41DA20051B5B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2A5A6363FE16438A95C2DDB /* Pods_BTC_Watch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38F3C09EF556B88D167D4404 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDD7F17549BB961A1C9D9938 /* Pods_PhotoTagger.framework */,
+				6D4F766E337FDE54F3B0F82A /* Pods_BTC_Watch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AE017391DC2D70AB4C3ABCC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FAE3E76FD16F1D94B04CEB0 /* Pods-BTC Watch.debug.xcconfig */,
+				06A0030569A298496C99C888 /* Pods-BTC Watch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		417B66801FC1C8D8004E5CD2 /* Transaction Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				417B66811FC1C8F5004E5CD2 /* TransactionTableViewController.swift */,
+			);
+			path = "Transaction Controllers";
+			sourceTree = "<group>";
+		};
+		93EF0C971BF41DA20051B5B1 = {
+			isa = PBXGroup;
+			children = (
+				93EF0CA21BF41DA20051B5B1 /* BTC Watch */,
+				93EF0CA11BF41DA20051B5B1 /* Products */,
+				3AE017391DC2D70AB4C3ABCC /* Pods */,
+				38F3C09EF556B88D167D4404 /* Frameworks */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		93EF0CA11BF41DA20051B5B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93EF0CA01BF41DA20051B5B1 /* BTC Watch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93EF0CA21BF41DA20051B5B1 /* BTC Watch */ = {
+			isa = PBXGroup;
+			children = (
+				C9C383061FC0F5630040D99F /* Models */,
+				93EF0CA31BF41DA20051B5B1 /* AppDelegate.swift */,
+				C9C382F81FC0E9920040D99F /* API */,
+				C9C382F71FC0E9870040D99F /* Extensions */,
+				C9C382F41FC0E8E20040D99F /* Utilities */,
+				C9C382F01FC0D3F30040D99F /* Helpers */,
+				C9C382FB1FC0ECF30040D99F /* Views */,
+				C9C382ED1FC0CFDF0040D99F /* View Controllers */,
+				C9C382EB1FC0CFB20040D99F /* Storyboards */,
+				C9C382EC1FC0CFC00040D99F /* Resources */,
+				416F45AB1FC5EAA10078431D /* MainTabBarController.swift */,
+			);
+			path = "BTC Watch";
+			sourceTree = "<group>";
+		};
+		C9C382EB1FC0CFB20040D99F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				93EF0CAC1BF41DA20051B5B1 /* LaunchScreen.storyboard */,
+				93EF0CA71BF41DA20051B5B1 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C9C382EC1FC0CFC00040D99F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93EF0CAF1BF41DA20051B5B1 /* Info.plist */,
+				93EF0CAA1BF41DA20051B5B1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C9C382ED1FC0CFDF0040D99F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				417B66801FC1C8D8004E5CD2 /* Transaction Controllers */,
+				93EF0CA51BF41DA20051B5B1 /* OverviewViewController.swift */,
+				417B66781FC05E09004E5CD2 /* CurrencyViewController.swift */,
+				417B667A1FC07E73004E5CD2 /* NewSettingsViewController.swift */,
+				417B66761FC05388004E5CD2 /* SettingsTableViewController.swift */,
+				41208EB31FB72C1000F45A9F /* SettingsViewController.swift */,
+				C9C3830B1FC7787C0040D99F /* BTCTabBarController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C9C382F01FC0D3F30040D99F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C9C382F11FC0D4110040D99F /* SegueIdentifiers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C9C382F41FC0E8E20040D99F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C9C382F51FC0E8F10040D99F /* Colours.swift */,
+				C9C382F91FC0E9B20040D99F /* SegueIdentityProvider.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C9C382F71FC0E9870040D99F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C9C383091FC0F9F70040D99F /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C9C382F81FC0E9920040D99F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C9C383031FC0F16A0040D99F /* Networking.swift */,
+				417B66871FC1F65D004E5CD2 /* TransactionApi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C9C382FB1FC0ECF30040D99F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9C382FC1FC0ECFA0040D99F /* TableViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C9C382FC1FC0ECFA0040D99F /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C9C382FD1FC0ED2D0040D99F /* CurrencyTableViewCell.swift */,
+				C9C382FF1FC0EDF90040D99F /* CurrencySettingTableViewCell.swift */,
+				C9C383011FC0EE0B0040D99F /* XPubSettingTableViewCell.swift */,
+				417B66831FC1CA2F004E5CD2 /* TransactionTableViewCell.swift */,
+				416F45A91FC33AA40078431D /* CostTxTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		C9C383061FC0F5630040D99F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9C383071FC0F56D0040D99F /* BTC.swift */,
+				417B66851FC1F5E3004E5CD2 /* Transaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93EF0C9F1BF41DA20051B5B1 /* BTC Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93EF0CB21BF41DA20051B5B1 /* Build configuration list for PBXNativeTarget "BTC Watch" */;
+			buildPhases = (
+				A044CE17FA94E5D44772E5F2 /* [CP] Check Pods Manifest.lock */,
+				93EF0C9C1BF41DA20051B5B1 /* Sources */,
+				93EF0C9D1BF41DA20051B5B1 /* Frameworks */,
+				93EF0C9E1BF41DA20051B5B1 /* Resources */,
+				68EBB88217A9EA9EBB83B2E9 /* [CP] Embed Pods Frameworks */,
+				273E1C7F727D4DC02546395A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BTC Watch";
+			productName = PhotoTagger;
+			productReference = 93EF0CA01BF41DA20051B5B1 /* BTC Watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93EF0C981BF41DA20051B5B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Jastech Ltd";
+				TargetAttributes = {
+					93EF0C9F1BF41DA20051B5B1 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = J675RWMD84;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 93EF0C9B1BF41DA20051B5B1 /* Build configuration list for PBXProject "BTC Watch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93EF0C971BF41DA20051B5B1;
+			productRefGroup = 93EF0CA11BF41DA20051B5B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93EF0C9F1BF41DA20051B5B1 /* BTC Watch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93EF0C9E1BF41DA20051B5B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EF0CAE1BF41DA20051B5B1 /* LaunchScreen.storyboard in Resources */,
+				93EF0CAB1BF41DA20051B5B1 /* Assets.xcassets in Resources */,
+				93EF0CA91BF41DA20051B5B1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		273E1C7F727D4DC02546395A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BTC Watch/Pods-BTC Watch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68EBB88217A9EA9EBB83B2E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BTC Watch/Pods-BTC Watch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BTC Watch/Pods-BTC Watch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A044CE17FA94E5D44772E5F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BTC Watch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93EF0C9C1BF41DA20051B5B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41208EB41FB72C1000F45A9F /* SettingsViewController.swift in Sources */,
+				417B66841FC1CA2F004E5CD2 /* TransactionTableViewCell.swift in Sources */,
+				C9C383081FC0F56D0040D99F /* BTC.swift in Sources */,
+				417B66791FC05E09004E5CD2 /* CurrencyViewController.swift in Sources */,
+				417B66771FC05388004E5CD2 /* SettingsTableViewController.swift in Sources */,
+				C9C383041FC0F16A0040D99F /* Networking.swift in Sources */,
+				417B667B1FC07E73004E5CD2 /* NewSettingsViewController.swift in Sources */,
+				C9C382F21FC0D4110040D99F /* SegueIdentifiers.swift in Sources */,
+				417B66861FC1F5E3004E5CD2 /* Transaction.swift in Sources */,
+				417B66881FC1F65D004E5CD2 /* TransactionApi.swift in Sources */,
+				C9C383021FC0EE0B0040D99F /* XPubSettingTableViewCell.swift in Sources */,
+				C9C3830C1FC7787C0040D99F /* BTCTabBarController.swift in Sources */,
+				93EF0CA61BF41DA20051B5B1 /* OverviewViewController.swift in Sources */,
+				93EF0CA41BF41DA20051B5B1 /* AppDelegate.swift in Sources */,
+				C9C382FA1FC0E9B20040D99F /* SegueIdentityProvider.swift in Sources */,
+				C9C382FE1FC0ED2D0040D99F /* CurrencyTableViewCell.swift in Sources */,
+				417B66821FC1C8F5004E5CD2 /* TransactionTableViewController.swift in Sources */,
+				416F45AA1FC33AA40078431D /* CostTxTableViewCell.swift in Sources */,
+				416F45AC1FC5EAA10078431D /* MainTabBarController.swift in Sources */,
+				C9C382F61FC0E8F10040D99F /* Colours.swift in Sources */,
+				C9C383001FC0EDF90040D99F /* CurrencySettingTableViewCell.swift in Sources */,
+				C9C3830A1FC0F9F70040D99F /* UIViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		93EF0CA71BF41DA20051B5B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93EF0CA81BF41DA20051B5B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		93EF0CAC1BF41DA20051B5B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93EF0CAD1BF41DA20051B5B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93EF0CB01BF41DA20051B5B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93EF0CB11BF41DA20051B5B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93EF0CB31BF41DA20051B5B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FAE3E76FD16F1D94B04CEB0 /* Pods-BTC Watch.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J675RWMD84;
+				INFOPLIST_FILE = "$(SRCROOT)/BTC Watch/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jasuri.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		93EF0CB41BF41DA20051B5B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06A0030569A298496C99C888 /* Pods-BTC Watch.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J675RWMD84;
+				INFOPLIST_FILE = "$(SRCROOT)/BTC Watch/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jasuri.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93EF0C9B1BF41DA20051B5B1 /* Build configuration list for PBXProject "BTC Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93EF0CB01BF41DA20051B5B1 /* Debug */,
+				93EF0CB11BF41DA20051B5B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93EF0CB21BF41DA20051B5B1 /* Build configuration list for PBXNativeTarget "BTC Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93EF0CB31BF41DA20051B5B1 /* Debug */,
+				93EF0CB41BF41DA20051B5B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93EF0C981BF41DA20051B5B1 /* Project object */;
+}
