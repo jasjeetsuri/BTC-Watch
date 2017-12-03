@@ -2,7 +2,7 @@
 //  Colours.swift
 //  BTC Watch
 //
-//  Created by Myles Eynon on 18/11/2017.
+//  Created by Jasjeet Suri on 18/11/2017.
 //  Copyright © 2017 Jastech Ltd. All rights reserved.
 //
 

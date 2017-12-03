@@ -2,7 +2,7 @@
 //  SegueIdentifiers.swift
 //  uib
 //
-//  Created by Myles Eynon on 06/11/2017.
+//  Created by Jasjeet Suri on 06/11/2017.
 //  Copyright © 2017 Jastech Ltd. All rights reserved.
 //
 
