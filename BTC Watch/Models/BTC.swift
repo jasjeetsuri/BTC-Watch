@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//test
 struct BTC : Codable {
   var BTC_to_GBP: String
   var BTC_to_USD: String
