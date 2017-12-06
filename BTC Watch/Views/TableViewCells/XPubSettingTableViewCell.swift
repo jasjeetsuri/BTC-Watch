@@ -31,6 +31,6 @@ class XPubSettingTableViewCell: UITableViewCell {
   
   func reset() {
     self.xpubTextField.text = nil
-    self.xpubSettingLabel.text = nil
+    //self.xpubSettingLabel.text = nil
   }
 }

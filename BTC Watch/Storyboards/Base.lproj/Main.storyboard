@@ -506,18 +506,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter xpub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhi-6y-XCh">
-                                                    <rect key="frame" x="15" y="11.666666666666664" width="108" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="108" id="Ejb-qF-L1M"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yvG-Xz-qgu">
-                                                    <rect key="frame" x="180" y="6.6666666666666679" width="219" height="30.000000000000004"/>
+                                                    <rect key="frame" x="15" y="6" width="276" height="30"/>
                                                     <color key="backgroundColor" red="0.55809803299492389" green="0.55809803299492389" blue="0.55809803299492389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="276" id="379-hN-aQP"/>
+                                                    </constraints>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -527,19 +521,26 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWS-ax-yTx">
+                                                    <rect key="frame" x="299" y="6" width="100" height="30"/>
+                                                    <state key="normal" title="Scan Address">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="scanAddrBtn:" destination="ipq-dP-ami" eventType="touchUpInside" id="m4H-Gn-rfG"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Zhi-6y-XCh" firstAttribute="centerY" secondItem="yvG-Xz-qgu" secondAttribute="centerY" id="QhB-Fs-Wt3"/>
-                                                <constraint firstAttribute="trailing" secondItem="yvG-Xz-qgu" secondAttribute="trailing" constant="15" id="VxR-Y8-FqO"/>
-                                                <constraint firstItem="yvG-Xz-qgu" firstAttribute="leading" secondItem="Zhi-6y-XCh" secondAttribute="trailing" constant="57" id="YUE-vG-1EI"/>
-                                                <constraint firstItem="Zhi-6y-XCh" firstAttribute="centerY" secondItem="PCF-3e-cuO" secondAttribute="centerY" id="n34-sJ-yTC"/>
+                                                <constraint firstItem="kWS-ax-yTx" firstAttribute="leading" secondItem="yvG-Xz-qgu" secondAttribute="trailing" constant="8" id="04x-iV-VtW"/>
+                                                <constraint firstAttribute="trailing" secondItem="kWS-ax-yTx" secondAttribute="trailing" constant="15" id="8zx-pn-Rjb"/>
+                                                <constraint firstItem="kWS-ax-yTx" firstAttribute="centerY" secondItem="PCF-3e-cuO" secondAttribute="centerY" id="Bgu-LH-THX"/>
+                                                <constraint firstAttribute="trailing" secondItem="yvG-Xz-qgu" secondAttribute="trailing" constant="123" id="O6p-7u-DB5"/>
+                                                <constraint firstItem="yvG-Xz-qgu" firstAttribute="leading" secondItem="PCF-3e-cuO" secondAttribute="leading" constant="15" id="WrU-i1-3XI"/>
+                                                <constraint firstItem="yvG-Xz-qgu" firstAttribute="centerY" secondItem="PCF-3e-cuO" secondAttribute="centerY" id="vUz-w3-u3n"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <constraints>
-                                            <constraint firstItem="Zhi-6y-XCh" firstAttribute="leading" secondItem="PWv-xU-JTw" secondAttribute="leading" constant="15" id="VOm-km-4Ea"/>
-                                        </constraints>
                                         <connections>
-                                            <outlet property="xpubSettingLabel" destination="Zhi-6y-XCh" id="kGf-XI-90X"/>
                                             <outlet property="xpubTextField" destination="yvG-Xz-qgu" id="cz5-Ah-Qn5"/>
                                         </connections>
                                     </tableViewCell>
@@ -571,6 +572,39 @@
                                             <outlet property="currencySettingLabel" destination="81e-iK-JDv" id="BGm-aM-i2R"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TouchIdTableViewCell" id="KEl-Sb-fAl" userLabel="TouchId" customClass="TouchIdTableViewCell" customModule="BTC_Watch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="116" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KEl-Sb-fAl" id="ofr-bU-tDJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZh-xd-xcd" userLabel="touchidlbl">
+                                                    <rect key="frame" x="15" y="12" width="124" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="124" id="ff5-pQ-NBf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRY-p1-Nnm">
+                                                    <rect key="frame" x="350" y="6" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IZh-xd-xcd" firstAttribute="centerY" secondItem="ofr-bU-tDJ" secondAttribute="centerY" id="5OC-ns-kRB"/>
+                                                <constraint firstItem="FRY-p1-Nnm" firstAttribute="centerY" secondItem="ofr-bU-tDJ" secondAttribute="centerY" id="8j5-Wn-JW5"/>
+                                                <constraint firstItem="IZh-xd-xcd" firstAttribute="leading" secondItem="ofr-bU-tDJ" secondAttribute="leading" constant="15" id="Fcu-L2-mgg"/>
+                                                <constraint firstAttribute="trailing" secondItem="FRY-p1-Nnm" secondAttribute="trailing" constant="15" id="SYk-6t-ac2"/>
+                                                <constraint firstItem="FRY-p1-Nnm" firstAttribute="centerY" secondItem="ofr-bU-tDJ" secondAttribute="centerY" id="ooR-TG-QL2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="touchIdEnable" destination="FRY-p1-Nnm" id="hu7-Dw-UNZ"/>
+                                            <outlet property="touchIdLbl" destination="IZh-xd-xcd" id="SjK-sg-dko"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="ipq-dP-ami" id="AXS-Up-VIN"/>
@@ -597,7 +631,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36x-f6-4mH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1432.5" y="155.28169014084509"/>
+            <point key="canvasLocation" x="1430.4347826086957" y="154.89130434782609"/>
         </scene>
         <!--Currency-->
         <scene sceneID="TTQ-xa-R9C">

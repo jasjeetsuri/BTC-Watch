@@ -7,13 +7,80 @@
 //
 
 import UIKit
+import AVFoundation
 
-class NewSettingsViewController: UIViewController {
+var captureSession:AVCaptureSession?
+var videoPreviewLayer:AVCaptureVideoPreviewLayer?
+var qrCodeFrameView:UIView?
+var gradientLayer = CALayer()
+
+class NewSettingsViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
   
   //MARK: Properties
   
   var xpubSetting: String?
   @IBOutlet weak var tableView: UITableView!
+  @IBAction func scanAddrBtn(_ sender: UIButton) {
+    // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
+    let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+    
+    do {
+      // Get an instance of the AVCaptureDeviceInput class using the previous device object.
+      let input = try AVCaptureDeviceInput(device: captureDevice)
+      
+      // Initialize the captureSession object.
+      captureSession = AVCaptureSession()
+      
+      // Set the input device on the capture session.
+      captureSession?.addInput(input)
+      
+      // Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
+      let captureMetadataOutput = AVCaptureMetadataOutput()
+      captureSession?.addOutput(captureMetadataOutput)
+      
+      // Set delegate and use the default dispatch queue to execute the call back
+      captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+      captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
+      
+    } catch {
+      // If any error occurs, simply print it out and don't continue any more.
+      print(error)
+      return
+    }
+    gradientLayer.frame = tableView.bounds
+    gradientLayer.backgroundColor = UIColor.black.withAlphaComponent(0.5).cgColor
+    gradientLayer.isHidden = false
+    
+    // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
+    videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+    videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+    
+    //let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+    let frameSize: CGPoint = CGPoint(x: ((tableView.bounds.size.width*0.5)-((tableView.bounds.size.width-80)/2)),y: ((tableView.bounds.size.height*0.5)-((tableView.bounds.size.width-80)/2)))
+    
+    let rect = CGRect(origin: frameSize, size: CGSize(width: (tableView.bounds.size.width-80), height: (tableView.bounds.size.width-80)))
+    videoPreviewLayer?.frame = rect
+    view.layer.addSublayer(videoPreviewLayer!)
+    view.layer.insertSublayer(gradientLayer, at:1)
+    //fade background
+    gradientLayer.frame = tableView.bounds
+    gradientLayer.backgroundColor = UIColor.black.withAlphaComponent(0.5).cgColor
+    gradientLayer.isHidden = false
+    
+    
+    // Start video capture.
+    captureSession?.startRunning()
+    
+    //Initialize QR Code Frame to highlight the QR code
+    qrCodeFrameView = UIView()
+    
+    if let qrCodeFrameView = qrCodeFrameView {
+      qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
+      qrCodeFrameView.layer.borderWidth = 2
+      view.addSubview(qrCodeFrameView)
+      view.bringSubview(toFront: qrCodeFrameView)
+    }
+  }
   
   //MARK: Outlets
   
@@ -29,11 +96,14 @@ class NewSettingsViewController: UIViewController {
     tableView.backgroundColor =  UIColor(red: 30.0/255.0 , green:  30.0/255.0 , blue :  30.0/255.0 , alpha: 1.0)
     tableView.separatorColor = UIColor.darkGray
     self.hideKeyboardWhenTappedAround()
-      //xpubSetting.delegate = self
   }
 
   override func viewDidAppear(_ animated: Bool) {
+    videoPreviewLayer?.isHidden = true
+    qrCodeFrameView?.isHidden = true
+    captureSession?.stopRunning()
     myTable.reloadData()
+    gradientLayer.isHidden = true
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -41,8 +111,13 @@ class NewSettingsViewController: UIViewController {
   }
 }
 
+func handleSingleTap(recognizer: UITapGestureRecognizer) {
+  videoPreviewLayer?.isHidden = true
+  qrCodeFrameView?.isHidden = true
+  captureSession?.stopRunning()
+}
+
 extension NewSettingsViewController: UITextFieldDelegate {
-  
   func textFieldDidEndEditing(_ textField: UITextField) {
     if(textField.tag == 0){
       let defaults = UserDefaults.standard
@@ -58,6 +133,38 @@ extension NewSettingsViewController: UITextFieldDelegate {
     //self.xpubSetting.resignFirstResponder()
     return true
   }
+  
+  
+  func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+    
+    // Check if the metadataObjects array is not nil and it contains at least one object.
+    if metadataObjects == nil || metadataObjects.count == 0 {
+      qrCodeFrameView?.frame = CGRect.zero
+      //messageLabel.text = "No QR code is detected"
+      return
+    }
+    
+    // Get the metadata object.
+    let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+    
+    if metadataObj.type == AVMetadataObjectTypeQRCode {
+      // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
+      let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
+      qrCodeFrameView?.frame = barCodeObject!.bounds
+      
+      if metadataObj.stringValue != nil {
+        //xpubt = metadataObj.stringValue
+        let defaults = UserDefaults.standard
+          defaults.set(metadataObj.stringValue, forKey: "xpub")
+        tableView.reloadData()
+        videoPreviewLayer?.isHidden = true
+        qrCodeFrameView?.isHidden = true
+        captureSession?.stopRunning()
+        gradientLayer.isHidden = true
+      }
+    }
+  }
+  
 }
 
 extension NewSettingsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -77,7 +184,7 @@ extension NewSettingsViewController: UITableViewDelegate, UITableViewDataSource 
         cell.xpubTextField.text = UserDefaults.standard.string(forKey: "xpub")!
       }
       cell.xpubTextField.placeholder = "Enter your xpub"
-      cell.xpubSettingLabel.text = "Enter xpub"
+      //cell.xpubSettingLabel.text = "Enter xpub"
       cell.xpubTextField.tag = 0
       cell.xpubTextField.autocorrectionType = UITextAutocorrectionType.no
       cell.xpubTextField.clearButtonMode = UITextFieldViewMode.whileEditing
@@ -97,6 +204,12 @@ extension NewSettingsViewController: UITableViewDelegate, UITableViewDataSource 
       cell.backgroundColor = UIColor(red: 30.0/255.0 , green:  30.0/255.0 , blue :  30.0/255.0 , alpha: 1.0)
       return(cell)
     }
+    if indexPath.row == 2 {
+      let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TouchIdTableViewCell.self)) as! TouchIdTableViewCell
+      cell.backgroundColor = UIColor(red: 30.0/255.0 , green:  30.0/255.0 , blue :  30.0/255.0 , alpha: 1.0)
+      cell.touchIdLbl.text = "Touch Id"
+      return(cell)
+    }
     return UITableViewCell()
   }
   
@@ -109,7 +222,6 @@ extension NewSettingsViewController: UITableViewDelegate, UITableViewDataSource 
     }
   }
 }
-
 extension UIViewController {
   func hideKeyboardWhenTappedAround() {
     let tap: UITapGestureRecognizer =     UITapGestureRecognizer(target: self, action:    #selector(UIViewController.dismissKeyboard))
@@ -117,6 +229,11 @@ extension UIViewController {
     view.addGestureRecognizer(tap)
   }
   func dismissKeyboard() {
+    gradientLayer.isHidden = true
+    videoPreviewLayer?.isHidden = true
+    qrCodeFrameView?.isHidden = true
+    captureSession?.stopRunning()
     view.endEditing(true)
   }
 }
+
