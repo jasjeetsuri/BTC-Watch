@@ -16,4 +16,5 @@ struct BTC : Codable {
   var Total_Fiat: String
   var Total_Cost: String
   var Profit: String
+  var isUp: String
 }

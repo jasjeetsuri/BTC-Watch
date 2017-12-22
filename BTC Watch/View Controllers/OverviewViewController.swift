@@ -109,7 +109,14 @@ class OverviewViewController: UIViewController {
       self.exchangeRate3Lbl.text = ""
       self.rateEUR.text = String(balance.BTC_to_USD) + " USD"
     }
+    if balance.isUp == "True"{
     self.Profit.text = "+" + String(balance.Profit) + " " + UserDefaults.standard.string(forKey: "currency")!
+      self.Profit.textColor = UIColor.green
+    }
+    if balance.isUp == "False"{
+      self.Profit.text = String(balance.Profit) + " " + UserDefaults.standard.string(forKey: "currency")!
+      self.Profit.textColor = UIColor.red
+    }
   }
   
   func startLoading() {
